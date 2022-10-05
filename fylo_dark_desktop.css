@@ -1,0 +1,570 @@
+/* @import "fylo_dark_mobil.css" screen and (max-width: 375px); */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Primary */
+    --dark-blue-intro-email: hsl(217, 28%, 15%);
+    --dark-blue-main-bg: hsl(218, 28%, 13%);
+    --dark-blue-footer-bg: hsl(216, 53%, 9%);
+    --dark-blue-testimonials: hsl(219, 30%, 18%);
+
+    /* Accent */
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --light-red-error: hsl(0, 100%, 63%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--dark-blue-main-bg);
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+nav img {
+    width: 130px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: rgba(218, 213, 213, 0.867);
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.curvy-bg {
+    height: 954px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--dark-blue-testimonials);
+    background-image: url("./images/bg-curvy-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+.intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.intro img {
+    max-width: 450px;
+    justify-self: center;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    max-width: 710px;
+    margin-top: 30px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    max-width: 570px;
+}
+
+.intro button {
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    padding: 21px 98px;
+    background-color: var(--cyan);
+    color: #fff;
+    border-radius: 30px;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.intro button:hover {
+    background-color: hsl(175, 100%, 82%);
+    color: rgb(126, 121, 121);
+}
+
+.grid-display {
+    display: grid;
+    grid-template-areas: "c1 c2"
+        "c3 c4"
+    ;
+    grid-auto-rows: 250px;
+    text-align: center;
+    margin: 150px 0;
+}
+
+.access {
+    grid-area: c1;
+}
+
+.security {
+    grid-area: c2;
+}
+
+.collaboration {
+    grid-area: c3;
+}
+
+.store {
+    grid-area: c4;
+}
+
+.grid-display img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.info-card {
+    align-self: center;
+    padding: 0 20%;
+}
+
+.info-card h2 {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.info-card p {
+    font-size: 12px;
+    padding: 0 57px;
+}
+
+.productive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 0 50px;
+}
+
+.productive img:not(img[alt="arrow"]) {
+    width: 100%;
+    justify-self: center;
+}
+
+.stay-productive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.stay-productive h2 {
+    font-size: 3.5rem;
+}
+
+.stay-productive p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.stay-productive a {
+    text-decoration: none;
+    color: var(--cyan);
+    border-bottom: 1px solid var(--cyan);
+    padding-bottom: 5px;
+}
+
+.stay-productive a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.stay-productive a img {
+    vertical-align: middle;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0 40px;
+    margin: 80px 0;
+}
+
+.cards .patel {
+    position: relative;
+}
+
+.cards img[alt="quotes"] {
+    width: 40px;
+    position: absolute;
+    top: -26px;
+    left: -6px;
+    z-index: -1;
+    border-radius: 0;
+}
+
+.cards>div {
+    background-color: var(--dark-blue-testimonials);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.cards>div p:not(.profile-container p) {
+    font-size: 1.1rem;
+}
+
+.cards .profile-container {
+    margin: 20px 0 0;
+}
+
+.cards .profile-container>p {
+    font-size: 12px;
+}
+
+.cards .profile-container>small {
+    font-size: 8px;
+}
+
+.cards img {
+    width: 30px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.early-access-today {
+    background-color: var(--dark-blue-intro-email);
+    text-align: center;
+    border-radius: 5px;
+    padding: 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    top: 122px;
+    z-index: 1;
+}
+
+.early-access-today p {
+    margin: 20px 0;
+}
+
+.early-access-today form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.early-access-today form input {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.early-access-today form input[type="submit"] {
+    background-color: var(--cyan);
+    color: #fff;
+    cursor: pointer;
+}
+
+.early-access-today form input[type="submit"].hover {
+    background-color: hsl(174, 65%, 66%);
+}
+
+.early-access-today form input:first-child {
+    width: 100%
+}
+
+.early-access-today form input:last-child {
+    width: 100%
+}
+
+.early-access-today form input:last-child:hover {
+    background-color: hsl(175, 100%, 82%);
+    color: rgb(126, 121, 121);
+}
+
+footer {
+    background-color: var(--dark-blue-footer-bg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 240px 40px 50px;
+    position: relative;
+}
+
+.footer-text img {
+    width: 140px;
+    position: absolute;
+    top: 174px;
+    left: 18px;
+}
+
+.footer-text p {
+    position: relative;
+}
+
+.footer-text p::before {
+    content: url("./images/icon-location.svg");
+    position: absolute;
+    top: 4px;
+    left: -25px;
+}
+
+.footer-contact,
+.footer-links-one,
+.footer-links-two {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-phone,
+.footer-email {
+    position: relative;
+}
+
+.footer-phone::before {
+    content: url("./images/icon-phone.svg");
+    position: absolute;
+    top: 0;
+    left: -50px;
+}
+
+.footer-email::before {
+    content: url("./images/icon-email.svg");
+    position: absolute;
+    top: 0;
+    left: -40px;
+}
+
+.footer-links-one a,
+.footer-links-two a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons i {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: var(--cyan);
+}
+
+@media screen and (max-width: 880px) {
+
+    .grid-display {
+        grid-template-areas: "c1"
+            "c2"
+            "c3"
+            "c4"
+        ;
+        margin: 0;
+    }
+
+    .intro img {
+        max-width: 300px;
+        position: relative;
+        top: -16px;
+    }
+
+    .info-card {
+        padding: 0;
+    }
+
+    .productive img {
+        max-width: 300px;
+    }
+
+    .stay-productive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stay-productive h2 {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .stay-productive a {
+        align-self: flex-start;
+    }
+
+}
+
+@media screen and (max-width: 630px) {
+
+    .early-access-today form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .curvy-bg {
+        height: 498px;
+        background-color: var(--dark-blue-testimonials);
+        width: 100%;
+        background-image: url("./images/bg-curvy-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+        z-index: -1;
+        position: absolute;
+        top: -100px;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        padding: 20px;
+    }
+
+    nav ul li a:not(:last-child) {
+        margin-right: 55px;
+    }
+
+    nav img {
+        width: 70px;
+    }
+
+    .stay-productive p {
+        font-size: 0.80rem;
+    }
+
+    .stay-productive h2 {
+        font-size: 1rem;
+    }
+
+    .cards>div p:not(.profile-container p) {
+        font-size: 0.65rem;
+        line-height: 18px;
+    }
+
+    .early-access-today {
+        max-width: 350px;
+        padding: 34px;
+        top: 180px;
+        margin-top: -80px;
+    }
+
+    .early-access-today h2 {
+        font-size: 1rem;
+    }
+
+    .early-access-today p {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 94px 120px 163px 123px;
+        padding-top: 350px;
+        padding-bottom: 50px;
+        gap: 0;
+    }
+
+    .footer-text img {
+        width: 180px;
+        margin-bottom: 20px;
+        left: 47px;
+        top: 250px;
+    }
+
+    .footer-text p {
+        text-align: left;
+        font-size: 15px;
+        position: relative;
+        padding-left: 35px;
+    }
+
+    .footer-text p::before {
+        top: 6px;
+        left: 6px;
+    }
+
+    .footer-contact {
+        margin-top: 10px;
+    }
+
+    .footer-contact .footer-phone {
+        margin-bottom: 20px;
+    }
+
+    .footer-contact,
+    .footer-links-one,
+    .footer-links-two {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-phone,
+    .footer-email {
+        padding-left: 40px;
+    }
+
+    .footer-phone::Before {
+        left: 4px;
+    }
+
+    .footer-email::before {
+        left: 4px;
+    }
+
+}
